@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "777952724698",
+    "project_id": "jeevan-57fc5",
+    "storage_bucket": "jeevan-57fc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777952724698:android:f5c486b5485fb58d89c7e3",
+        "android_client_info": {
+          "package_name": "com.example.jeevan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777952724698-3645cvh5fqiv0dt5l42vd0o9gl0a7dgj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAcVw2u6UiIccQMtAnLg-Uy7wwD5zXoNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777952724698-3645cvh5fqiv0dt5l42vd0o9gl0a7dgj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
