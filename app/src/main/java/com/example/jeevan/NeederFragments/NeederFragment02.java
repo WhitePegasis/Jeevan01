@@ -58,7 +58,7 @@ public class NeederFragment02 extends Fragment implements activeDoctorsSelectLis
                 for (DataSnapshot datasnapshot : snapshot.getChildren()) {
                     docModel users = datasnapshot.getValue(docModel.class);
                     users.setUserid(datasnapshot.getKey());
-                    users.setDocStatus(datasnapshot.child("status").getValue(String.class));
+                    //users.setDocStatus(datasnapshot.child("mail").getValue(String.class));( second commit)
                     //I guess mail should be status
                     //Log.d("statuscheck","status is: "+datasnapshot.child("status").getValue(String.class));
 
@@ -66,6 +66,7 @@ public class NeederFragment02 extends Fragment implements activeDoctorsSelectLis
                     if (datasnapshot.child("status").getValue(String.class).equals("Active")){
                         arraylist.add(users);
                     }
+
                 }
                 adapter.notifyDataSetChanged();
 
