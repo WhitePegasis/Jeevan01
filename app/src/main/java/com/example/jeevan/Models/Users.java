@@ -1,5 +1,7 @@
 package com.example.jeevan.Models;
 
+
+//model class for doctors which will show needers
 public class Users {
     String dp,username,mail,password,userid,lastmessage,type,docStatus, RequestSent;
 
