@@ -53,11 +53,12 @@ public class docNotificationPageAdapter extends RecyclerView.Adapter<docNotifica
         holder.username.setText(user.getUsername());
         database=FirebaseDatabase.getInstance();
         auth=FirebaseAuth.getInstance();
+
         holder.acceptBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 holder.chatBtn.setEnabled(true);
-                database.getReference().child("Needers").child(user.getUserid()).child("DocRequest")
+                database.getReference().child("Needers").child(user.getUserid()).child("DocAcceptedRequest")
                         .setValue(auth.getCurrentUser().getUid());
             }
         });
@@ -66,7 +67,7 @@ public class docNotificationPageAdapter extends RecyclerView.Adapter<docNotifica
             public void onClick(View view) {
                 holder.chatBtn.setEnabled(false);
                 database.getReference().child("Needers").child(user.getUserid()).child("DocRequest").setValue("null");
-                database.getReference().child("Needers").child(user.getUserid()).child("RequestSent").setValue("null");
+                database.getReference().child("Needers").child(user.getUserid()).child("DocAcceptedRequest").setValue("null");
 
             }
         });

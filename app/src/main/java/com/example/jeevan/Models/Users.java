@@ -3,7 +3,7 @@ package com.example.jeevan.Models;
 
 //model class for doctors which will show needers
 public class Users {
-    String dp,username,mail,password,userid,lastmessage,type,docStatus, RequestSent;
+    String dp,username,mail,password,userid,lastmessage,type,docStatus, DocRequest,DocAcceptedRequest;
 
 
 
@@ -18,12 +18,13 @@ public class Users {
         this.docStatus=status;
     }
 
-    public Users(String username, String mail, String password,String type,String RequestSent) {
+    public Users(String username, String mail, String password,String type,String DocRequest,String DocAcceptedRequest) {
         this.username = username;
         this.mail = mail;
         this.password = password;
         this.type=type;
-        this.RequestSent=RequestSent;
+        this.DocRequest =DocRequest;
+        this.DocAcceptedRequest=DocAcceptedRequest;
     }
 
     public Users(String docStatus){
