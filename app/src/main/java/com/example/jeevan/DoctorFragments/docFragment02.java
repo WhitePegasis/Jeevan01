@@ -61,7 +61,7 @@ public class docFragment02 extends Fragment {
                     Users users=datasnapshot.getValue(Users.class);
                     users.setUserid(datasnapshot.getKey());
 
-                    if(datasnapshot.child("RequestSent").getValue(String.class).equals(auth.getCurrentUser().getUid()))
+                    if(datasnapshot.child("DocRequest").getValue(String.class).equals(auth.getCurrentUser().getUid()))
                     {
                         arraylist.add(users);
                     }

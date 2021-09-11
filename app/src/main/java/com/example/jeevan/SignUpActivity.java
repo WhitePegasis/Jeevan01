@@ -53,8 +53,10 @@ public class SignUpActivity extends AppCompatActivity {
                                     String id=task.getResult().getUser().getUid();
                                     if(binding.type.getText().toString().equals("needer")){
                                         Users user=new Users(binding.editTextTextPersonName.getText().toString(),binding.editTextTextEmailAddress.getText().toString()
-                                                ,binding.editTextTextPassword.getText().toString(),binding.type.getText().toString(),"null");
+                                                ,binding.editTextTextPassword.getText().toString(),binding.type.getText().toString(),"null","null");
                                         database.getReference().child("Needers").child(id).setValue(user);
+                                        database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocAcceptedRequest").setValue("null");
+                                        database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocRequest").setValue("null");
                                     }
                                     else{
                                         docModel docuser=new docModel(binding.editTextTextPersonName.getText().toString(),binding.editTextTextEmailAddress.getText().toString()

@@ -58,7 +58,11 @@ public class NeederFragment02 extends Fragment implements activeDoctorsSelectLis
                 for (DataSnapshot datasnapshot : snapshot.getChildren()) {
                     docModel users = datasnapshot.getValue(docModel.class);
                     users.setUserid(datasnapshot.getKey());
+
                     //users.setDocStatus(datasnapshot.child("mail").getValue(String.class));( second commit)
+
+                    //users.setDocStatus(datasnapshot.child("mail").getValue(String.class));
+
                     //I guess mail should be status
                     //Log.d("statuscheck","status is: "+datasnapshot.child("status").getValue(String.class));
 
@@ -82,13 +86,15 @@ public class NeederFragment02 extends Fragment implements activeDoctorsSelectLis
 
     }
 
-    @Override
-    public void OnItemClicked(docModel model) {
-        database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("RequestSent").setValue(model.getUserid())
+
+
+   @Override
+   public void OnItemClicked(docModel model) {
+        database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocRequest").setValue(model.getUserid())
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                        Toast.makeText(getContext(), "Child added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Sent Request", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

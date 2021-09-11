@@ -73,7 +73,7 @@ public class neederConsultpageAdapter extends RecyclerView.Adapter<neederConsult
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.child("DocAcceptedRequest").getValue(String.class).equals(user.getUserid())){
                         holder.chatBtn.setEnabled(true);
-                        Log.d("sdf",snapshot.child("DocRequest").getValue(String.class) + "== "+user.getUserid());
+                        Log.d("sdf",snapshot.child("DocAcceptedRequest").getValue(String.class) + "== "+user.getUserid());
                     }
                     else {
                         holder.chatBtn.setEnabled(false);

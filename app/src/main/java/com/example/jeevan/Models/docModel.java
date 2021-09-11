@@ -1,5 +1,6 @@
 package com.example.jeevan.Models;
 
+//model class for user fragment which will show doctors
 public class docModel {
     String dp,username,mail,password,userid,lastmessage,type,docStatus,sendRequest,viewDetails,chat;
 
