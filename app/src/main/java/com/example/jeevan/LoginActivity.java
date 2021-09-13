@@ -91,7 +91,6 @@ public class LoginActivity extends AppCompatActivity{
                                     else{
                                         Intent intent;
                                         intent = new Intent(LoginActivity.this, MainActivityNeeder.class);
-                                        database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("RequestSent").setValue("null");
                                         startActivity(intent);
                                     }
                                 }

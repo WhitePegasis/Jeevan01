@@ -17,9 +17,11 @@ import com.example.jeevan.databinding.ActivityMainBinding;
 import com.example.jeevan.databinding.ActivityMainNeederBinding;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivityNeeder extends AppCompatActivity {
     ActivityMainNeederBinding binding;
+    FirebaseDatabase database;
     FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,8 @@ public class MainActivityNeeder extends AppCompatActivity {
                 auth.signOut();
                 Toast.makeText(this, "signedout", Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(MainActivityNeeder.this, LoginActivity.class);
+                database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocAcceptedRequest").setValue("null");
+                database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocRequest").setValue("null");
                 startActivity(intent1);
                 break;
             case R.id.settings:
