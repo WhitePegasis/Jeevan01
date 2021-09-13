@@ -39,8 +39,9 @@ public class LoginActivity extends AppCompatActivity{
         auth=FirebaseAuth.getInstance();
 
         //if user is already logged in directly send him/her to main page
-        if(auth.getCurrentUser()!=null)
+        /*if(auth.getCurrentUser()!=null)
         {
+            Toast.makeText(this, ""+auth.getCurrentUser(), Toast.LENGTH_SHORT).show();
             // if user is a doctor open doctors page else needers page
             DatabaseReference ref=database.getReference().child("Doctors").child(auth.getCurrentUser().getUid()).child("type");
             ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -65,7 +66,7 @@ public class LoginActivity extends AppCompatActivity{
             });
 
 
-        }
+        }*/
 
         //if  user id not logged in take users email and password for login and send him/her to the respective page
         binding.loginbtn.setOnClickListener(new View.OnClickListener() {

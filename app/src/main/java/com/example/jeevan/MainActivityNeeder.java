@@ -65,11 +65,13 @@ public class MainActivityNeeder extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.logout:
-                auth.signOut();
+
                 Toast.makeText(this, "signedout", Toast.LENGTH_SHORT).show();
-                Intent intent1 = new Intent(MainActivityNeeder.this, LoginActivity.class);
+
                 database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocAcceptedRequest").setValue("null");
                 database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocRequest").setValue("null");
+                auth.signOut();
+                Intent intent1 = new Intent(MainActivityNeeder.this, LoginActivity.class);
                 startActivity(intent1);
                 break;
             case R.id.settings:
