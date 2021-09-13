@@ -55,13 +55,14 @@ public class SignUpActivity extends AppCompatActivity {
                                         Users user=new Users(binding.editTextTextPersonName.getText().toString(),binding.editTextTextEmailAddress.getText().toString()
                                                 ,binding.editTextTextPassword.getText().toString(),binding.type.getText().toString(),"null","null");
                                         database.getReference().child("Needers").child(id).setValue(user);
-                                        database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocAcceptedRequest").setValue("null");
-                                        database.getReference().child("Needers").child(auth.getCurrentUser().getUid()).child("DocRequest").setValue("null");
+                                        database.getReference().child("Needers").child(id).child("DocAcceptedRequest").setValue("null");
+                                        database.getReference().child("Needers").child(id).child("DocRequest").setValue("null");
                                     }
                                     else{
                                         docModel docuser=new docModel(binding.editTextTextPersonName.getText().toString(),binding.editTextTextEmailAddress.getText().toString()
                                                 ,binding.editTextTextPassword.getText().toString(),binding.type.getText().toString());
                                         database.getReference().child("Doctors").child(id).setValue(docuser);
+                                        database.getReference().child("Doctors").child(id).child("status").setValue("unActive");
                                     }
 
                                     Toast.makeText(SignUpActivity.this, "Task Successful", Toast.LENGTH_SHORT).show();
