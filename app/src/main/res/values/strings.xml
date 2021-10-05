@@ -4,4 +4,11 @@
     <string name="logout">Logout</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="timePrefix"> &#160;at&#160; </string>
+    <string name="submit">submit</string>
+    <string name="instruct">
+    This app requires to be run in the background so please turn on Autostart and set battery restrictions to no restriction for the app.
+    </string>
+
 </resources>

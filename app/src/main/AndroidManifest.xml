@@ -14,7 +14,7 @@
             android:name=".chatDetailActivity"
             android:exported="true" />
         <activity android:name=".MainActivityNeeder" />
-        <activity android:name=".LoginActivity"
+        <activity android:name=".covidslots.COVIDSlots.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".covidslots.COVIDSlots.IndiaStatsActivity"></activity>
+        <activity android:name=".covidslots.COVIDSlots.CowinActivity"></activity>
+
         <activity android:name=".MainActivityDoc" />
     </application>
 
