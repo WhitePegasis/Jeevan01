@@ -145,6 +145,39 @@
 
         </EditText>
 
+        <EditText
+            android:id="@+id/tv_file_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/backgroundedittext"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Upload certificate"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/type">
+
+        </EditText>
+        <Button
+            android:id="@+id/uploadcertificate"
+            android:onClick="ClickedUpload"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttongradient"
+            android:text="upload"
+            app:backgroundTint="#673AB7"
+            app:backgroundTintMode="screen"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_file_path" />
+
+
         <Button
             android:id="@+id/signupbtn"
             android:layout_width="200dp"
@@ -158,49 +191,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/type" />
+            app:layout_constraintTop_toBottomOf="@+id/uploadcertificate" />
 
-        <Button
-            android:id="@+id/facebooksignup"
-            android:layout_width="119dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginRight="9dp"
-            android:layout_marginBottom="156dp"
-            android:text="facebook"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:backgroundTint="#395599"
-            app:icon="@drawable/fbicon2"
-            app:iconPadding="0dp"
-            app:iconSize="20dp"
-            app:iconTint="#E4E6EF"
-            app:iconTintMode="multiply"
-            app:layout_constraintBottom_toTopOf="@+id/guideline7"
-            app:layout_constraintEnd_toStartOf="@+id/googlesignup"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/googlesignup"
-            android:layout_width="119dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="9dp"
-            android:layout_marginLeft="9dp"
-            android:layout_marginEnd="76dp"
-            android:layout_marginRight="76dp"
-            android:layout_marginBottom="156dp"
-            android:text="google"
-            android:textAllCaps="false"
-            app:backgroundTint="#D74C41"
-            app:icon="@drawable/gpiconn1"
-            app:iconPadding="0dp"
-            app:iconSize="20dp"
-            app:iconTint="#E8D8D8"
-            app:layout_constraintBottom_toTopOf="@+id/guideline7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/facebooksignup" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"
