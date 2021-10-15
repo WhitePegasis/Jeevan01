@@ -104,7 +104,7 @@ public class CowinActivity extends AppCompatActivity
                 }
 
                 name = vaccineText.getText().toString();
-                if(!name.equals("COVAXIN") && !name.equals("COVISHIELD"))
+                if(!name.equals("covaxin") && !name.equals("covishield"))
                 {
                     Context context = getApplicationContext();
                     CharSequence text = "Invalid Vaccine Type";
