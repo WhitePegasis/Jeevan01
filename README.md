@@ -16,9 +16,9 @@
 
 ## Technologies
 
-*Android Studio, Firebase.  
-*Java for backend, XML for frontend.
-*Multitreading, API calling, JASON parsing, JavaMail API.
+* Android Studio, Firebase.  
+* Java for backend, XML for frontend.
+* Multitreading, API calling, JASON parsing, JavaMail API.
 
 ## Setup
 To run this project, Clone it locally using cmd:
