@@ -7,8 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@drawable/backgroundedittext"
-    android:layout_marginTop="3dp"
-    android:backgroundTint="#E1CCFB"
+    android:layout_marginTop="5dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,16 +62,14 @@
             android:layout_height="match_parent"
             android:layout_marginRight="20dp"
             android:padding="20dp"
-
-            android:text="Chat"
-            app:backgroundTint="#008175"
-            app:backgroundTintMode="screen"
             android:background="@drawable/chatbtngradient"
+            android:text="Chat"
+            android:backgroundTint="#6FCDC4"
+            android:backgroundTintMode="screen"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginEnd="20dp"
-             />
+            android:layout_marginEnd="20dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
@@ -80,9 +77,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
+        android:layout_marginTop="5dp"
         android:background="#E1CCFB"
         android:gravity="center"
-        android:padding="4dp"
         >
 
         <Button
@@ -92,12 +89,11 @@
             android:layout_gravity="center"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            app:backgroundTint="#C2E817"
-            app:backgroundTintMode="screen"
-            android:background="@drawable/acceptbtngradient"
+            android:backgroundTint="#C2E817"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            android:text="Accept" />
+            android:text="Accept"
+            tools:targetApi="lollipop" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,9 +101,7 @@
             android:layout_gravity="center"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            app:backgroundTint="#F63434"
-            app:backgroundTintMode="screen"
-            android:background="@drawable/declinebtngradient"
+            android:backgroundTint="#F63434"
             tools:targetApi="lollipop"
             android:id="@+id/declineBtn"/>
     </LinearLayout>

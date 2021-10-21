@@ -38,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity {
         database=FirebaseDatabase.getInstance();
 
         binding.signupbtn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 progressdialog.show();
@@ -52,6 +53,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                                     String id=task.getResult().getUser().getUid();
                                     if(binding.type.getText().toString().equals("needer")){
+                                        Toast.makeText(SignUpActivity.this, "Inside Needer if", Toast.LENGTH_SHORT).show();
                                         Users user=new Users(binding.editTextTextPersonName.getText().toString(),binding.editTextTextEmailAddress.getText().toString()
                                                 ,binding.editTextTextPassword.getText().toString(),binding.type.getText().toString(),"null","null");
                                         database.getReference().child("Needers").child(id).setValue(user);

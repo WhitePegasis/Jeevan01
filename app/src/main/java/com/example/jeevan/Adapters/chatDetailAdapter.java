@@ -42,7 +42,7 @@ public class chatDetailAdapter extends RecyclerView.Adapter{
         if(viewType==SENDER_VIEW_TYPE)
         {
             View view=LayoutInflater.from(context).inflate(R.layout.sample_sender,parent,false);
-            binding=SampleSenderBinding.bind(view);//trying to bind     412421 122432546646dfhsh
+            binding=SampleSenderBinding.bind(view);//trying to bind
             return new SenderViewholder(view);
         }
         else{
