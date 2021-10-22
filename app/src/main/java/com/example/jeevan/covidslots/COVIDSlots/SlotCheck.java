@@ -159,10 +159,8 @@ public class SlotCheck extends Worker {
 
 
         catch(JSONException e){
-            // If an error is thrown when executing any of the above statements in the "try" block,
-            // catch the exception here, so the app doesn't crash. Print a log message
-            // with the message from the exception.
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+
+            Log.e("QueryUtils", "Problem in parsing", e);
         }
         return -1;
     }
@@ -220,7 +218,7 @@ public class SlotCheck extends Worker {
                 int dose2 = sessions.getJSONObject(0).getInt("available_capacity_dose2");
                 String date = sessions.getJSONObject(0).getString("date");
 
-                if(!vaccineType.equals(vaccine) || (dose1 == 0 && dose2 == 0))
+                if(!vaccineType.equals(vaccine.toUpperCase()) || (dose1 == 0 && dose2 == 0))
                     continue;
 
 
