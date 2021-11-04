@@ -23,30 +23,30 @@
 
         <TextView
             android:layout_width="190dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="40dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/ripple5"
             android:gravity="center_horizontal"
-            android:paddingTop="65dp"
+            android:paddingTop="45dp"
             android:text="COVID LIVE UPDATE"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
         <Button
         android:id="@+id/india"
-        android:layout_width="190dp"
-        android:layout_height="50dp"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
         android:backgroundTint="#ECEFF1"
         android:text="GO"
         android:textColor="@color/black" />
 
     <TextView
         android:layout_width="190dp"
-        android:layout_height="150dp"
+        android:layout_height="90dp"
         android:gravity="center_horizontal"
-        android:paddingTop="65dp"
+        android:paddingTop="45dp"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="5dp"
         android:text="VACCINATION SLOTS"
         android:textColor="@color/black"
         android:background="@drawable/ripple5" />
@@ -58,13 +58,15 @@
         android:text="GO"
         android:textColor="@color/black" />
 
+
+
         <TextView
             android:layout_width="190dp"
-            android:layout_height="150dp"
+            android:layout_height="90dp"
             android:gravity="center_horizontal"
-            android:paddingTop="65dp"
+            android:paddingTop="35dp"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="5dp"
             android:text="CONSULT"
             android:textColor="@color/black"
             android:background="@drawable/ripple5" />
@@ -75,6 +77,41 @@
             android:backgroundTint="#ECEFF1"
             android:text="GO"
             android:textColor="@color/black" />
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="45dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:text="INSTRUCTIONS"
+            android:textColor="@color/black"
+            android:background="@drawable/ripple5" />
+        <Button
+            android:id="@+id/instructions"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#ECEFF1"
+            android:text="GO"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="90dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="45dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:text="DEVELOPERS"
+            android:textColor="@color/black"
+            android:background="@drawable/ripple5" />
+        <Button
+            android:id="@+id/developers"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#ECEFF1"
+            android:text="GO"
+            android:textColor="@color/black" />
+
 
     </LinearLayout>
 </RelativeLayout>
